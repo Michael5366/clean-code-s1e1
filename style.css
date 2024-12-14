@@ -1,5 +1,5 @@
 /* Basic Style */
-body {
+.body {
   background-color: #f8f8f8;
   color: #333;
   font-family: lato, sans-serif;
@@ -10,10 +10,10 @@ body {
   display: block;
   text-align: right;
 }
-.header img {
+.header__img {
   width: 100%;
 }
-.header .header__link {
+.header__link {
   font-family: fantasy, cursive;
 }
 
@@ -34,17 +34,17 @@ body {
 .form-add__input-wrapper {
   display: flex;
 }
-ul {
+.main__list {
   margin:0;
   padding: 0px;
 }
-li, h3 {
+.main__item {
   list-style:none;
 }
-input,button{
+.form-add__input,.main__input,.main__btn{
   outline:none;
 }
-button {
+.main__btn {
   background: none;
   border: 0px;
   color: #888;
@@ -53,12 +53,12 @@ button {
   font-family: lato, sans-serif;
   cursor: pointer;
 }
-button:hover {
+.main__btn:hover {
   color: #3a3A3a;
 }
 /* Heading */
-h3,
-label[for="new-task"] {
+.main__title,
+.form-add__label {
   color: #333;
   font-weight: 700;
   font-size: 15px;
@@ -67,7 +67,7 @@ label[for="new-task"] {
   margin: 0;
   text-transform: uppercase;
 }
-input[type="text"] {
+.form-add__input,.main__input {
   margin: 0;
   font-size: 18px;
   line-height: 18px;
@@ -79,21 +79,21 @@ input[type="text"] {
   font-family: lato, sans-serif;
   color: #888;
 }
-input[type="text"]:focus {
+.main__input:focus {
   color: #333;
 }
 
 /* New Task */
-label[for="new-task"] {
+.form-add__label {
   display: block;
   margin: 0 0 20px;
 }
-input#new-task {
+#new-task {
   width: 318px;
 }
 
 /* Task list */
-li {
+.main__item {
   overflow: hidden;
   padding: 20px 0;
   border-bottom: 1px solid #eee;
@@ -102,47 +102,47 @@ li {
   justify-content: space-between;
   align-items: center;
 }
-li > * {
+.main__item > * {
   vertical-align: middle;
 }
 
-li > input[type="checkbox"] {
+.main__item > .main__checkbox {
   margin: 0 10px;
 }
-li > label {
+.main__item > .main__label {
   padding-left: 10px;
   box-sizing: border-box;
   font-size: 18px;
   width: 226px;
 }
-li >  input[type="text"] {
+.main__item >  .main__input {
   width: 226px
 }
-button.main__btn--del img {
+.main__rm-icon {
   height: 2em;
   transform: rotatez(45deg);
   transition: transform 200ms ease-in;
 }
-button.main__btn--del img:hover {
+.main__rm-icon:hover {
   transform: rotatez(0);
 }
 
 /* Completed */
-ul#completed-list label {
+#completed-list .main__label {
   text-decoration: line-through
   color: #888;
 }
 
 /* Edit Task */
-ul li input[type="text"] {
+.main__input {
   display:none
 }
 
-ul li.main__item--editing input[type="text"] {
+.main__item--editing .main__input {
   display:inline-block;
   width:224px
 }
 
-ul li.main__item--editing label {
+.main__item--editing .main__label {
   display:none;
 }
